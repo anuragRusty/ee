@@ -1,0 +1,11 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.sc-carousel__carousel-container {
+    height: 100%;
+  }
+
+  .sc-carousel__content-container {
+    height: 100%;
+  }
