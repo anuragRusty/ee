@@ -9,3 +9,17 @@ body{
   .sc-carousel__content-container {
     height: 100%;
   }
+
+  a{
+    text-decoration: none;
+    color:white;
+    padding-left: 10px;
+   }
+
+   nav ul li a {
+    color:black;
+   }
+ 
+   a:hover{
+     color:#007bff;
+   }

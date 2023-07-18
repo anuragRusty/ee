@@ -1,4 +1,5 @@
 <script>
+  import { scale } from 'svelte/transition';
   import Research from "../assets/research.svg";
   import Head from "../assets/head.svg";
   import Acad from "../assets/acad.svg";
@@ -7,10 +8,8 @@
 
 </script>
 
-<div class="container">
-
+<div class="container" transition:scale>
   <div class="upper">
-
    <div class="image-slider">
     <Carousel autoplay autoplayDuration={2000}>
     <div id="slide-1" class="slide" style="background-size:100% 100%; background-image: url(https://images.unsplash.com/photo-1466853817435-05b43fe45b39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2198&q=80);"></div>
@@ -18,7 +17,6 @@
 		<div id="slide-3" class="slide" style="background-size:100% 100%; background-image: url(https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2842&q=80);"></div>
     </Carousel>
    </div>
-
     <div class="left">
       <div class="image" style="background-color:#0F52BA;">
         <img alt="research" src={Research} style="width:90%; height:90%; padding:20px;">
@@ -32,12 +30,9 @@
       <div class="image" style="background-color:#0F52BA;">
         <img alt="research" src={Head} style="width:90%; height:90%; padding-top:20px;">
       </div>
-
     </div>
-
   </div>
   <div class="lower">
-
     <div class="box box2" style="background-color:#EF6262; ">
       <h2>ABOUT THE DEPARTMENT</h2>
       <p style="text-align:center; font-size:larger">

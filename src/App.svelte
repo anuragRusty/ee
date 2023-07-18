@@ -1,12 +1,22 @@
 <script>
-import Body from "./lib/Body.svelte";
-import Footer from "./lib/Footer.svelte";
-import Header from "./lib/Header.svelte";
+import { Router, Link, Route } from 'svelte-navigator';
+import Home from "./pages/Home.svelte";
+import Footer from "./layouts/Footer.svelte";
+import Header from "./layouts/Header.svelte";
+    import Count from './pages/Count.svelte';
 
 
 
 </script>
 
-<Header/>
-<Body/>
-<Footer/>
+<main>
+    <Router>
+        <Header/>
+        <Route path="/">
+        </Route>
+        <Route path="/home" component={Home}>
+        </Route>
+        <Footer/>
+    </Router>
+</main>
+

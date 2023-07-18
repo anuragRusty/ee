@@ -1,4 +1,5 @@
 <script>
+import { Router, Link, Route } from 'svelte-navigator';
 import { slide,fade } from 'svelte/transition';
 import Logo from "../assets/logocec.svg";
 
@@ -32,7 +33,8 @@ function handleMenuClick(item){
 <nav>
   <ul>
     {#each navItems as item,i}
-    <li on:click={() => handleNavClick(item)}>{item}{#if i < navItems.length-1} {" | "} {/if}
+    <li on:click={() => handleNavClick(item)}>
+     <Link to={"./" + item.toLocaleLowerCase()}> {item} </Link>
     </li>
     {/each}
   </ul>
@@ -43,7 +45,7 @@ function handleMenuClick(item){
    {#if isDesktop || isMobile}
     <ul transition:slide>
       {#each menuItems as item }
-        <li on:click={() => handleMenuClick(item)}>{item}</li>
+        <li on:click={() => handleMenuClick(item)}><Link to={"./" + item.toLocaleLowerCase()}> {item}</Link></li>
       {/each}
     </ul>
     {/if}
@@ -99,15 +101,6 @@ function handleMenuClick(item){
     font-size: 20px;
   }
 
-  nav ul li{
-   text-decoration: none;
-   color:black;
-  }
-
-  nav ul li:hover{
-    color:#007bff;
-  }
-
   .menu-title{
     display: flex;
     cursor: pointer;
@@ -153,6 +146,7 @@ function handleMenuClick(item){
 
     nav ul li{
       font-size: smaller;
+      padding-left: 5px;
     }
 
     .coll-name {

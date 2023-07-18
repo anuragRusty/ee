@@ -29,6 +29,7 @@
         <div class="box about">
          <h2>The Institute</h2>
          <p>
+            chaibasaengg.edu.in
             Chaibasa Engineering College is a technical undergraduate college focused on the tertiary study of engineering and natural sciences, located near Chaibasa town in the West Singhbhum district in the Kolhan division of India.
          </p>
         </div>
