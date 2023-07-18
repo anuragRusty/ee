@@ -13,6 +13,7 @@ import Header from "./layouts/Header.svelte";
     <Router>
         <Header/>
         <Route path="/">
+        <Home/>
         </Route>
         <Route path="/home" component={Home}>
         </Route>
