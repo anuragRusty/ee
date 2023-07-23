@@ -1,69 +1,93 @@
 <script>
-import { Router, Link, Route } from 'svelte-navigator';
-import { slide,fade } from 'svelte/transition';
-import Logo from "../assets/logocec.svg";
+  import { Router, Link, Route } from "svelte-navigator";
+  import { slide, fade } from "svelte/transition";
+  import Logo from "../assets/logocec.svg";
 
-let isDesktop = window.screen.width>600;
-let isMobile = false;
+  let isDesktop = window.screen.width > 600;
+  let isMobile = false;
 
-const navItems = ["HOME","RESEARCH","PROGRAMME","FORMER FACULITY","CEC"];
-const menuItems = ["HISTORY","HEAD","PEOPLE","AWARDS AND RECOGNITION","STAFF","ACADEMIC PROGRAM","PUBLICATION","CONTACT","ABOUT"]
-let currItem = navItems[0];
+  const navItems = ["HOME", "RESEARCH", "PROGRAMME", "FACULITY", "CEC"];
+  const menuItems = [
+    "HISTORY",
+    "HEAD",
+    "PEOPLE",
+    "AWARDS AND RECOGNITION",
+    "STAFF",
+    "ACADEMIC PROGRAM",
+    "PUBLICATION",
+    "CONTACT",
+    "ABOUT",
+  ];
+  let currItem = navItems[0];
 
-function handleNavClick(item){
-     currItem = item;     
-}
+  function handleNavClick(item) {
+    currItem = item;
+  }
 
-function handleMenuClick(item){
-  currItem = item;
-  isMobile = false;
-}
-
+  function handleMenuClick(item) {
+    currItem = item;
+    isMobile = false;
+  }
 </script>
 
 <div class="container">
   <header>
-   <div class="logo">
-    <img alt="logo" src={Logo}>
-    <div class="logo-text">
-      <div class="coll-name">Chaibasa Engineering College</div>
-      <div class="dep-name">Electrical Department</div>
-  </div>
-</div>
-<nav>
-  <ul>
-    {#each navItems as item,i}
-    <li on:click={() => handleNavClick(item)}>
-     <Link to={"./" + item.toLocaleLowerCase()}> {item} </Link>
-    </li>
-    {/each}
-  </ul>
-</nav>
+    <div class="logo">
+      <img alt="logo" src={Logo} />
+      <div class="logo-text">
+        <div class="coll-name">Chaibasa Engineering College</div>
+        <div class="dep-name">Electrical Department</div>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        {#each navItems as item}
+          <li on:click={() => handleNavClick(item)}>
+            <Link to={"./" + item.toLocaleLowerCase().split(" ").join("")}
+              >{item}</Link
+            >
+          </li>
+        {/each}
+      </ul>
+    </nav>
   </header>
   <div class="menu-bar">
-   {#if !isDesktop} <div transition:fade class="menu-title" on:click={() => isMobile = !isMobile}><div>MENU</div>&#9776;</div> {/if}
-   {#if isDesktop || isMobile}
-    <ul transition:slide>
-      {#each menuItems as item }
-        <li on:click={() => handleMenuClick(item)}><Link to={"./" + item.toLocaleLowerCase()}> {item}</Link></li>
-      {/each}
-    </ul>
+    {#if !isDesktop}
+      <div
+        transition:fade
+        class="menu-title"
+        on:click={() => (isMobile = !isMobile)}
+      >
+        <div>MENU</div>
+        &#9776;
+      </div>
+    {/if}
+    {#if isDesktop || isMobile}
+      <ul transition:slide>
+        {#each menuItems as item}
+          <li on:click={() => handleMenuClick(item)}>
+            <Link to={"./" + item.toLocaleLowerCase().split(" ").join("")}
+              >{item}</Link
+            >
+          </li>
+        {/each}
+      </ul>
     {/if}
   </div>
   {#if currItem !== "HOME"}
-  <div class="curr-item-bar" transition:slide>{currItem}</div>
+    <div class="curr-item-bar" transition:slide>{currItem}</div>
   {/if}
 </div>
 
 <style>
-  .container{
+  .container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 10px;
   }
 
-  .logo{
+  .logo {
     display: flex;
     padding: 0;
   }
@@ -72,13 +96,13 @@ function handleMenuClick(item){
     font-size: 35px;
   }
 
-  .dep-name{
+  .dep-name {
     font-size: larger;
   }
 
-  .curr-item-bar{
-    margin-top:-10px;
-    background-color: 	#0F52BA;
+  .curr-item-bar {
+    margin-top: -10px;
+    background-color: #0f52ba;
     width: 100%;
     /* height: 50px; */
     font-size: 35px;
@@ -89,19 +113,19 @@ function handleMenuClick(item){
     color: #f2f2f2;
   }
 
-  header{
+  header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
   }
 
-  nav{
+  nav {
     padding-top: 15px;
-    font-size: 20px;
+    font-size: 15px;
   }
 
-  .menu-title{
+  .menu-title {
     display: flex;
     cursor: pointer;
     justify-content: space-between;
@@ -109,7 +133,7 @@ function handleMenuClick(item){
     border-bottom: 1px solid white;
   }
 
-   ul {
+  ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -117,72 +141,66 @@ function handleMenuClick(item){
     gap: 10px;
   }
 
-  .menu-bar{
-  width:100%;
-  background-color: 	#0F52BA;
-  color: white;
+  .menu-bar {
+    width: 100%;
+    background-color: #0f52ba;
+    color: white;
   }
 
-  .menu-bar ul li{
-      padding: 10px;
+  .menu-bar ul li {
+    padding: 10px;
+    font-size: smaller;
   }
 
   .menu-bar ul li:hover {
-    background-color: #0b2f58; 
+    background-color: #0b2f58;
   }
 
-  
-.menu-bar ul {
-  justify-content: space-between;
-}
+  .menu-bar ul {
+    justify-content: space-between;
+  }
 
-  @media only screen and (max-width: 600px){
-    header{
+  @media only screen and (max-width: 600px) {
+    header {
       flex-direction: column;
     }
-    ul{
+    ul {
       flex-wrap: wrap;
     }
 
-    nav ul li{
-      font-size: smaller;
-      padding-left: 5px;
+    nav ul {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    nav ul li {
+      font-size: small;
     }
 
     .coll-name {
-    padding-top: 20px;
-    font-size: medium;
-  }
-
-  .dep-name{
-    padding: auto;
-    font-size: small;
-  }
-  
-    .menu-bar{
-    padding: 0;
+      padding-top: 20px;
+      font-size: medium;
     }
 
-    .menu-bar ul{
+    .dep-name {
+      padding: auto;
+      font-size: small;
+    }
+
+    .menu-bar {
+      padding: 0;
+    }
+
+    .menu-bar ul {
       display: block;
     }
-   
-   .menu-bar ul li{
+
+    .menu-bar ul li {
       border-bottom: 1px solid white;
     }
-    nav{
-    padding-top: 10px;
-    font-size: smaller;
+    nav {
+      padding-top: 10px;
+      font-size: smaller;
+    }
   }
-  }
-
 </style>
-
-
-  
-  
-  
-  
-  
-  
-  
