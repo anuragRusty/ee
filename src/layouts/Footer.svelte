@@ -9,10 +9,10 @@
          <div class="box contacts">
             <ul>
                 <h2>Contacts</h2>
-                <li><b>Prof. Chandan Chakraborty</b></li>
+                <li><b>Dr. Dummy Person</b></li>
                 <li>Head, Department of Electrical Engineering</li>
-                <li> Phone: +91-3222-282262</li>
-                <li>Email: hod@ee.iitkgp.ac.in</li>
+                <li> Phone: +91010101010</li>
+                <li>Email: hod@ee.email.com</li>
             </ul>
         </div>
          <div class="box quic-links">
@@ -29,7 +29,6 @@
         <div class="box about">
          <h2>The Institute</h2>
          <p>
-            chaibasaengg.edu.in
             Chaibasa Engineering College is a technical undergraduate college focused on the tertiary study of engineering and natural sciences, located near Chaibasa town in the West Singhbhum district in the Kolhan division of India.
          </p>
         </div>
@@ -84,7 +83,6 @@ ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    /* display: flex; */
     gap: 10px;
   }
 
