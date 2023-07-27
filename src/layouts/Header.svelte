@@ -67,8 +67,8 @@
     {#if isDesktop || isMobile}
       <ul transition:slide>
         {#each menuItems as item}
-          <li>
-            <Link to={"./" + item.toLocaleLowerCase().split(" ").join("")}><div  on:click={() => handleMenuClick(item)}>{item}</div></Link>
+          <li  on:click={() => handleMenuClick(item)}>
+            <Link to={"./" + item.toLocaleLowerCase().split(" ").join("")}><div>{item}</div></Link>
           </li>
         {/each}
       </ul>
