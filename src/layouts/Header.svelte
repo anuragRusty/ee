@@ -1,5 +1,5 @@
 <script>
-  import { Router, Link, Route } from "svelte-navigator";
+  import { Link} from "svelte-navigator";
   import { slide, fade } from "svelte/transition";
   import Logo from "../assets/logocec.svg";
 
@@ -43,9 +43,7 @@
       <ul>
         {#each navItems as item}
           <li on:click={() => handleNavClick(item)}>
-            <Link to={"./" + item.toLocaleLowerCase().split(" ").join("")}
-              >{item}</Link
-            >
+            <Link to={"./" + item.toLocaleLowerCase()}>{item}</Link>
           </li>
         {/each}
       </ul>
@@ -56,8 +54,7 @@
       <div
         transition:fade
         class="menu-title"
-        on:click={() => (isMobile = !isMobile)}
-      >
+        on:click={() => (isMobile = !isMobile)}>
         <div>MENU</div>
         &#9776;
       </div>
@@ -66,9 +63,7 @@
       <ul transition:slide>
         {#each menuItems as item}
           <li on:click={() => handleMenuClick(item)}>
-            <Link to={"./" + item.toLocaleLowerCase().split(" ").join("")}
-              >{item}</Link
-            >
+            <Link to={"./" + item.toLocaleLowerCase().split(" ").join("")}><div>{item}</div></Link>
           </li>
         {/each}
       </ul>
@@ -104,7 +99,6 @@
     margin-top: -10px;
     background-color: #0f52ba;
     width: 100%;
-    /* height: 50px; */
     font-size: 35px;
     font-weight: 100;
     display: flex;
@@ -122,7 +116,7 @@
 
   nav {
     padding-top: 15px;
-    font-size: 15px;
+    font-size: medium;
   }
 
   .menu-title {
@@ -149,7 +143,7 @@
 
   .menu-bar ul li {
     padding: 10px;
-    font-size: smaller;
+    font-size: larger;
   }
 
   .menu-bar ul li:hover {
@@ -198,9 +192,9 @@
     .menu-bar ul li {
       border-bottom: 1px solid white;
     }
-    nav {
+    nav ul li {
       padding-top: 10px;
-      font-size: smaller;
+      font-size: 12px;
     }
   }
 </style>

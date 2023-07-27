@@ -33,7 +33,7 @@
     <div class="people">
       <div class="profile-pic" />
       <p class="profile-name">{people.name}</p>
-      <p>{people.about}</p>
+      <div class="profile-about">{people.about}</div>
     </div>
   {/each}
 </div>
@@ -48,7 +48,7 @@
   }
 
   .people {
-    width: 32.5%;
+    width: 24.55%;
     aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
@@ -65,7 +65,13 @@
   }
 
   .profile-name {
-    font-size: larger;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .profile-about{
+    font-size: small;
+    font-style: italic;
   }
 
   @media only screen and (max-width: 600px) {

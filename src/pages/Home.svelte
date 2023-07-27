@@ -29,33 +29,21 @@
       </Carousel>
     </div>
     <div class="left">
-      <div class="image" style="background-color:#0F52BA;">
-        <img
-          alt="research"
-          src={Research}
-          style="width:90%; height:90%; padding:20px;"
-        />
+      <div class="icon">
+        <img class="image" alt="research" src={Research} />
+        <div class="icon-name">RESEARCH</div>
       </div>
-      <div class="image" style="background-color:#0F52BA;">
-        <img
-          alt="research"
-          src={Award}
-          style="width:90%; height:90%; padding:10px;"
-        />
+      <div class="icon">
+        <img class="image" alt="research" src={Award}/>
+        <div class="icon-name added-pad">AWARDS</div>
       </div>
-      <div class="image" style="background-color:#0F52BA">
-        <img
-          alt="research"
-          src={Acad}
-          style="width:90%; height:90%; padding-top:20px;"
-        />
+      <div class="icon">
+        <img class="image" alt="research" src={Acad}/>
+        <div class="icon-name">ACCADEMIC PROGRAM</div>
       </div>
-      <div class="image" style="background-color:#0F52BA;">
-        <img
-          alt="research"
-          src={Head}
-          style="width:90%; height:90%; padding-top:20px;"
-        />
+      <div class="icon">
+        <img class="image" alt="research" src={Head}/>
+        <div class="icon-name">FROM THE HEAD</div>
       </div>
     </div>
   </div>
@@ -89,16 +77,50 @@
 
 <style>
   h2 {
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     border-bottom: #f2f2f2 solid 2px;
   }
 
-  .image {
+  .icon {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0f52ba;
+    height: 250px;
   }
+
+
+  .icon .image{
+    width: 90%;
+    height:90%;
+    transition: width 0.3s ease, height 0.3s ease;
+  }
+
+  .icon:hover .image{
+    width: 65%;
+    height:65%;
+  }
+
+
+  .icon .icon-name{
+    display: none;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .added-pad{
+    margin-top: 7px;
+  }
+
+  .icon:hover .icon-name{
+    display: block;
+  }
+
+  .icon:hover{
+    background-color: #0b2f58;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -121,11 +143,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-  }
-
-  .left .image {
-    height: 250px;
-    background-color: #94b49f;
   }
 
   .lower {
