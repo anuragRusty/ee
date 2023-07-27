@@ -25,6 +25,26 @@
       name: "Dummy2",
       about: "About",
     },
+
+    {
+      name: "Dummy2",
+      about: "About",
+    },
+
+    {
+      name: "Dummy2",
+      about: "About",
+    },
+
+    {
+      name: "Dummy2",
+      about: "About",
+    },
+
+    {
+      name: "Dummy2",
+      about: "About",
+    },
   ];
 </script>
 
@@ -44,12 +64,13 @@
     flex-wrap: wrap;
     color: #f2f2f2;
     gap: 10px;
+    justify-content: space-between;
     padding-bottom: 10px;
   }
 
   .people {
-    width: 24.55%;
-    aspect-ratio: 1/1;
+    width: calc(25% - 10px);
+    aspect-ratio: 1;
     display: flex;
     justify-content: center;
     align-items: center;

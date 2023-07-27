@@ -6,15 +6,14 @@
   let isDesktop = window.screen.width > 600;
   let isMobile = false;
 
-  const navItems = ["HOME", "RESEARCH", "PROGRAMME", "FACULITY", "CEC"];
+  const navItems = ["HOME", "RESEARCH", "PROGRAMME", "FACULITY", "CEC","LOGIN"];
   const menuItems = [
     "HISTORY",
     "HEAD",
     "PEOPLE",
-    "AWARDS AND RECOGNITION",
     "STAFF",
-    "ACADEMIC PROGRAM",
     "PUBLICATION",
+    "VISTOR'S HELP",
     "CONTACT",
     "ABOUT",
   ];
@@ -42,9 +41,15 @@
     <nav>
       <ul>
         {#each navItems as item}
-          <li on:click={() => handleNavClick(item)}>
-            <Link to={"./" + item.toLocaleLowerCase()}>{item}</Link>
-          </li>
+              {#if item === "CEC"}
+              <li>
+              <a href="https://chaibasaengg.edu.in/" target="_blank">{item}</a>
+              </li>
+              {:else}
+              <li on:click={() => handleNavClick(item)}>
+              <Link to={"./" + item.toLocaleLowerCase()}>{item}</Link>
+              </li>
+              {/if}
         {/each}
       </ul>
     </nav>
@@ -62,8 +67,8 @@
     {#if isDesktop || isMobile}
       <ul transition:slide>
         {#each menuItems as item}
-          <li on:click={() => handleMenuClick(item)}>
-            <Link to={"./" + item.toLocaleLowerCase().split(" ").join("")}><div>{item}</div></Link>
+          <li>
+            <Link to={"./" + item.toLocaleLowerCase().split(" ").join("")}><div  on:click={() => handleMenuClick(item)}>{item}</div></Link>
           </li>
         {/each}
       </ul>
@@ -194,7 +199,7 @@
     }
     nav ul li {
       padding-top: 10px;
-      font-size: 12px;
+      font-size: 10px;
     }
   }
 </style>

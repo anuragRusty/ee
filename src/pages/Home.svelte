@@ -48,7 +48,7 @@
     </div>
   </div>
   <div class="lower">
-    <div class="box box2" style="background-color:#EF6262; ">
+    <div class="box" style="background-color:#EF6262; ">
       <h2>ABOUT THE DEPARTMENT</h2>
       <p style="text-align:center; font-size:larger">
         Welcome to the Department of Electrical Engineering. <br />
@@ -101,7 +101,6 @@
     width: 65%;
     height:65%;
   }
-
 
   .icon .icon-name{
     display: none;
@@ -156,15 +155,9 @@
     background-color: #aac4ff;
   }
 
-  .box2 {
-    width: 400px;
-  }
 
   @media only screen and (max-width: 600px) {
-    .box2 {
-      width: auto;
-    }
-
+       
     .upper {
       flex-direction: column;
     }
