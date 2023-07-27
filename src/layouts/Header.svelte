@@ -121,7 +121,6 @@
 
   nav {
     padding-top: 15px;
-    font-size: medium;
   }
 
   .menu-title {
@@ -172,10 +171,6 @@
       justify-content: space-evenly;
     }
 
-    nav ul li {
-      font-size: small;
-    }
-
     .coll-name {
       padding-top: 20px;
       font-size: medium;
@@ -197,9 +192,10 @@
     .menu-bar ul li {
       border-bottom: 1px solid white;
     }
+
     nav ul li {
       padding-top: 10px;
-      font-size: 10px;
+      font-size: small;
     }
   }
 </style>
