@@ -47,6 +47,7 @@
      <div class="member">
         <div class="profile-pic-member"></div>
         <div class="name">{member.name}</div>
+        <i style="margin:2px;">Student</i>
         <div class="contact">
             <a href="mailto:{member.email}"><img alt="email" class="icon icon2" src={Email}></a>
             <a href="tel:{member.phone}"><img alt="phone" class="icon icon2" src={Phone}></a>
