@@ -4,6 +4,7 @@
     import Footer from "./layouts/Footer.svelte";
     import Header from "./layouts/Header.svelte";
     import People from "./pages/People.svelte";
+    import Contact from "./pages/Contact.svelte";
 </script>
 
 <main>
@@ -14,6 +15,7 @@
         </Route>
         <Route path="/home" component={Home} />
         <Route path="/people" component={People} />
+        <Route path="/contact" component={Contact} />
         <Footer />
     </Router>
 </main>
