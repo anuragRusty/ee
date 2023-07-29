@@ -6,12 +6,12 @@
   let isDesktop = window.screen.width > 600;
   let isMobile = false;
 
-  const navItems = ["HOME", "RESEARCH", "PROGRAMME", "FACULITY", "CEC","LOGIN"];
+  const navItems = ["HOME", "MAGAZINE", "PROGRAM", "FACULITY", "CEC","LOGIN"];
   const menuItems = [
-    "HISTORY",
     "HEAD",
+    "NEWS",
+    "EVENTS",
     "PEOPLE",
-    "STAFF",
     "PUBLICATION",
     "VISTOR'S HELP",
     "CONTACT",
@@ -158,7 +158,7 @@
     justify-content: space-between;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media (max-width: 768px){
     header {
       flex-direction: column;
     }

@@ -79,14 +79,14 @@
   }
 
   .profile-pic {
-    width: 60%;
-    height: 60%;
+    width: 70%;
+    height: 70%;
     border-radius: 50%;
     background-color: white;
   }
 
   .profile-name {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 5px;
   }
 
@@ -95,7 +95,7 @@
     font-style: italic;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media (max-width: 768px)  {
     .container {
       flex-direction: column;
     }

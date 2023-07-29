@@ -95,7 +95,7 @@ ul {
     font-size: medium;
 }
 
-@media only screen and (max-width: 600px){
+@media (max-width: 768px){
     footer{
         display: block;
     }

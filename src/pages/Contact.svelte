@@ -114,7 +114,7 @@
     }
 
     .profile-pic-hod{
-        margin: 30px;
+        margin: 10px;
         width: 75%;
         aspect-ratio: 1;
         border-radius: 50%;
@@ -154,7 +154,7 @@
         background-image: url(../assets/india.svg);
     }
 
-    @media only screen and (max-width: 600px) {
+    @media (max-width: 768px) {
         .container{
             flex-direction: column;
         }

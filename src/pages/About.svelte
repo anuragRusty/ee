@@ -87,7 +87,7 @@
         margin-bottom: 10px;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media (max-width: 768px){
        
         .welcome{
         width:100%;
