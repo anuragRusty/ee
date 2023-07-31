@@ -69,7 +69,7 @@
   }
 
   .people {
-    width: calc(25% - 10px);
+    width: calc(25% - 8px);
     aspect-ratio: 1;
     display: flex;
     justify-content: center;

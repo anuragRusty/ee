@@ -26,7 +26,7 @@
       </div>
       <div class="about">
         Department of Electrical Engineering,
-        Chaibasa Engineering College Chaibasa, West Singhum, 828122, JHARKHAND, INDIA.
+        Chaibasa Engineering College, Kelendi, Jhinkpani, Chaibasa, Kelende,833215 JHARKHAND, INDIA.
       </div>
     </div>
   </div>
@@ -87,7 +87,7 @@
   .contact {
     width: 100%;
     height: 40%;
-    font-size: larger;
+    font-size: medium;
     display: flex;
     flex-direction: row;
     gap: 10px;
