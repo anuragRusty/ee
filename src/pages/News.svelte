@@ -69,8 +69,9 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        background-color: #0f52ba;
         gap: 10px;
+        background-color: #0f52ba;
+        border-radius: 3px;
     }
 
     .news-header:hover{
@@ -82,11 +83,9 @@
         width: 100%;
         justify-content: space-between;
         font-size: 1.6em;
-        margin-right: 10px;
     }
 
     .info{
-      border-top: solid 2px #f2f2f2;
       font-size: 1.2em;
     }
     

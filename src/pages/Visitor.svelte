@@ -1,7 +1,6 @@
 <script>
   import { slide } from "svelte/transition";
 
-
 </script>
 
 <div class="container" in:slide>

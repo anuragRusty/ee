@@ -123,8 +123,8 @@
 
     .profile-pic-member{
         margin: 10px;
-        width: 35%;
-        height: 70%;
+        width: 30%;
+        height: 60%;
         border-radius: 50%;
         background-color: #f2f2f2;
     }
@@ -149,8 +149,8 @@
     }
 
     .icon2{
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
         background-image: url(../assets/india.svg);
     }
 

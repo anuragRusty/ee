@@ -9,6 +9,7 @@
     import Head from "./pages/Head.svelte";
     import Visitor from "./pages/Visitor.svelte";
     import News from "./pages/News.svelte";
+    import Events from "./pages/Events.svelte";
 </script>
 
 <main>
@@ -24,6 +25,7 @@
         <Route path="/head" component={Head} />
         <Route path="/news" component={News} />
         <Route path="/vistor'shelp" component={Visitor}></Route>
+        <Route path="/events" component={Events}></Route>
         <Footer />
     </Router>
 </main>
