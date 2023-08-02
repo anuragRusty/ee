@@ -8,6 +8,7 @@
     import About from "./pages/About.svelte";
     import Head from "./pages/Head.svelte";
     import Visitor from "./pages/Visitor.svelte";
+    import News from "./pages/News.svelte";
 </script>
 
 <main>
@@ -21,6 +22,7 @@
         <Route path="/contact" component={Contact} />
         <Route path="/about" component={About} />
         <Route path="/head" component={Head} />
+        <Route path="/news" component={News} />
         <Route path="/vistor'shelp" component={Visitor}></Route>
         <Footer />
     </Router>

@@ -52,7 +52,7 @@
   {#each Peoples as people}
     <div class="people">
       <div class="profile-pic" />
-      <p class="profile-name">{people.name}</p>
+      <div class="profile-name">{people.name}</div>
       <div class="profile-about">{people.about}</div>
     </div>
   {/each}
