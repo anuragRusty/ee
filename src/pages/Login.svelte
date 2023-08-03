@@ -1,16 +1,15 @@
-<!-- Login.svelte -->
 <script>
+  import {slide} from "svelte/transition";
   let username = '';
   let password = '';
 
   function handleLogin() {
-    // You can implement your login logic here
     console.log('Username:', username);
     console.log('Password:', password);
   }
 </script>
 
-<div class="container">
+<div class="container" in:slide>
   <div class="login">
     <div class="input-group">
       <label for="username">Username</label>
