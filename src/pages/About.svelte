@@ -30,11 +30,10 @@
 </script>
 
 <div class="container" in:slide>
- <div class="welcome">WELCOME TO EE DEPARTMENT!</div>
  <div class="info-container">
    {#each ABOUT as item}
    <div class="sub-info-container">
-       <h2>{item.title}</h2>
+       <div class="title">{item.title}</div>
        <div class="info">{item.info}</div>
    </div>
    {/each}
@@ -42,11 +41,15 @@
 </div>
 
 <style>
-    h2{
+    .title{
         color:#f2f2f2;
         text-align: center;
-        color:#333;
+        color:#f2f2f2;
+        font-size: 35px;
+        font-weight: 100;
         width: 100%;
+        background-color: #0f52ba;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
     .container{
         display: flex;
@@ -60,42 +63,32 @@
         flex-wrap: wrap;
         gap: 10px;
         justify-content: space-between;
-        background-color: #f2f2f2;
     }
 
     .sub-info-container{
         width: calc(33.3% - 10px);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
         color: #555;
         font-size: larger;
         display: flex;
         flex-direction: column;
         align-items: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
-    .welcome{
-        width:100%;
-        font-size: 45px;
-        font-weight: 100;
-        color:#f2f2f2;
-        text-align: center;
-        background-color: #0f52ba;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
+    
     .info{
         text-align: center;
         font-style: italic;
         margin-bottom: 10px;
+        width: 100%;
+        aspect-ratio: 3/1;
+        background-color: #f2f2f2;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
     @media (max-width: 768px){
        
-        .welcome{
-        width:100%;
-        font-size: 35px;
-        font-weight: 100;
-        }
-
         .info-container{
             flex-wrap: nowrap;
             flex-direction: column;
