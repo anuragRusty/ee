@@ -41,52 +41,76 @@
 ];
 
 </script>
+
 <div class="container" in:slide>
-    {#each newsArticle as article}
-     <div class="news-container">
-        <div class="news-header" on:click={() => article.show = !article.show}>
-             <div class="title">{article.title}</div>
-             <div class="date">{article.date}</div>
-       </div>
-       {#if article.show}
+  {#each newsArticle as article}
+    <div class="news-container">
+      <div class="news-header" on:click={() => article.show = !article.show}>
+        <div class="title">{article.title}</div>
+        <div class="date">{article.date}</div>
+      </div>
+      {#if article.show}
         <div class="info" transition:slide>{article.info}</div>
-       {/if}
-     </div>
-     {/each}
+      {/if}
+    </div>
+  {/each}
 </div>
 
 <style>
-    .container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding-bottom: 10px;
-        color:#f2f2f2;
-    }
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px;
+    color: black;
+  }
 
-    .news-container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        background-color: #0f52ba;
-        border-radius: 3px;
-    }
+  .news-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
 
-    .news-header:hover{
-        background-color: #0b2f58;
-    }
+  
+  .news-header {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    align-items: center;
+    gap: 20px;
+  }
 
+  .title {
+    color: #333;
+    font-size: 30px;
+  }
+
+  .date {
+    font-size: 20px;
+    color: #888;
+
+  }
+
+  .info {
+    font-size: 1.2em;
+    padding: 10px;
+    color: #555;
+  }
+
+  @media (max-width: 768px) {
     .news-header{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        font-size: 1.6em;
+      flex-direction: column;
+      gap:10px;
     }
-
-    .info{
-      font-size: 1.2em;
+    .date{
+      width:100%;
+      text-align: left;
     }
-    
+  }
+  
 </style>

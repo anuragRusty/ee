@@ -73,12 +73,12 @@
         display: flex;
         flex-direction: column;
         gap:10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .hod{
         width: 100%;
         height: 100%;
-        background-color: #0f52ba;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -106,11 +106,11 @@
     .member{
         width: 100%;
         height: 50%;
-        background-color: #0f52ba;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     .profile-pic-hod{
@@ -118,7 +118,7 @@
         width: 75%;
         aspect-ratio: 1;
         border-radius: 50%;
-        background-color: #f2f2f2;
+        border:solid 2px #333;
     }
 
     .profile-pic-member{
@@ -126,11 +126,12 @@
         width: 30%;
         height: 60%;
         border-radius: 50%;
-        background-color: #f2f2f2;
+        border:solid 2px #333;
     }
 
     .name{
         font-size: 30px;
+        color:#333;
     }
 
     .contact{
@@ -140,6 +141,7 @@
 
     .name-head{
         font-size: 40px;
+        color:#333;
     }
 
     .icon{
@@ -151,7 +153,10 @@
     .icon2{
         width: 30px;
         height: 30px;
-        background-image: url(../assets/india.svg);
+    }
+
+    i{
+        color: #555;
     }
 
     @media (max-width: 768px) {
@@ -179,6 +184,7 @@
      .name-head{
         font-size: 30px;
     }
+
      .icon2,.icon{
        width: 35px;
        height: 35px;

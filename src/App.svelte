@@ -11,6 +11,7 @@
     import News from "./pages/News.svelte";
     import Events from "./pages/Events.svelte";
     import Login from "./pages/Login.svelte";
+    import Notice from "./pages/Notice.svelte";
 </script>
 
 <main>
@@ -28,6 +29,7 @@
         <Route path="/vistor'shelp" component={Visitor}></Route>
         <Route path="/events" component={Events}></Route>
         <Route path="/login" component={Login}></Route>
+        <Route path="/notice" component={Notice}></Route>
         <Footer />
     </Router>
 </main>

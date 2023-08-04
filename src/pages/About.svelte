@@ -45,8 +45,7 @@
     h2{
         color:#f2f2f2;
         text-align: center;
-        border-bottom: solid 2px #f2f2f2;
-        background-color: #0f52ba;
+        color:#333;
         width: 100%;
     }
     .container{
@@ -65,12 +64,12 @@
 
     .sub-info-container{
         width: calc(33.3% - 10px);
-        color:#f2f2f2;
-        background-color: #0f52ba;
+        color: #555;
         font-size: larger;
         display: flex;
         flex-direction: column;
         align-items: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
     .welcome{
         width:100%;
@@ -79,6 +78,7 @@
         color:#f2f2f2;
         text-align: center;
         background-color: #0f52ba;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
     .info{

@@ -36,7 +36,6 @@
   .container {
     width: 100%;
     aspect-ratio: 4/1;
-    color: #f2f2f2;
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -47,15 +46,17 @@
     width: 100%;
     height: 80%;
     display: flex;
+    gap: 10px;
     justify-content: space-between;
     align-items: center;
-    background-color: #0f52ba;
   }
 
   .head-pic {
     width: 50%;
     height: 100%;
     background-color: #f2f2f2;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
   }
 
   .name-title {
@@ -65,15 +66,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 
   .name {
     font-size: 70px;
+    color:#333;
   }
 
   .title {
     font-size: 20px;
     font-style: italic;
+    color: #555;
   }
 
   .reach-me {
@@ -81,6 +86,7 @@
     font-size: 35px;
     font-weight: 100;
     text-align: center;
+    color:#f2f2f2;
     background-color: #0f52ba;
   }
 
@@ -91,7 +97,8 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    background-color: #0f52ba;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 
   .sub-contact {
@@ -112,8 +119,9 @@
   }
 
   .about {
-    border-left: 2px solid #f2f2f2;
+    border-left: 2px solid #555;
     padding: 20px;
+    border-radius: 0px;
   }
 
   @media (max-width: 768px) {

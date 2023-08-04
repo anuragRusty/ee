@@ -75,24 +75,27 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #0f52ba;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
 
   .profile-pic {
     width: 70%;
     height: 70%;
     border-radius: 50%;
-    background-color: white;
+    border:solid 2px #333;
   }
 
   .profile-name {
     font-size: 30px;
     margin-bottom: 5px;
+    color: #333;
   }
 
   .profile-about{
     font-size: small;
     font-style: italic;
+    color: #555;
   }
 
   @media (max-width: 768px)  {

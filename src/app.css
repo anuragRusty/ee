@@ -2,6 +2,10 @@ body{
     font-family: Arial, sans-serif;
 }
 
+div{
+  border-radius: 5px;
+}
+
 .sc-carousel__carousel-container {
     height: 100%;
   }

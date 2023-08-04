@@ -6,17 +6,9 @@
   let isDesktop = window.screen.width > 600;
   let isMobile = false;
 
-  const navItems = ["HOME", "MAGAZINE", "PROGRAM", "FACULITY", "CEC","LOGIN"];
-  const menuItems = [
-    "HEAD",
-    "NEWS",
-    "EVENTS",
-    "PEOPLE",
-    "PUBLICATION",
-    "VISTOR'S HELP",
-    "CONTACT",
-    "ABOUT",
-  ];
+  const navItems = ["HOME", "RESOURCES","NOTICE","FACULITY", "CEC","LOGIN"];
+  const menuItems = ["HEAD","NEWS","EVENTS","PEOPLE","VISTOR'S HELP","CONTACT","ABOUT",];
+  
   let currItem = navItems[0];
 
   function handleNavClick(item) {

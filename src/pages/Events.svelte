@@ -49,7 +49,7 @@
       justify-content: center;
       align-items: center;
       background-color: #f2f2f2;
-      border: 2px solid #ddd;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       border-radius: 5px;
       padding: 20px;
       margin: 10px;
