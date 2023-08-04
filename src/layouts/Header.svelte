@@ -66,7 +66,7 @@
       </ul>
     {/if}
   </div>
-  {#if currItem !== "HOME" && currItem !== "ABOUT"}
+  {#if currItem !== "HOME" && (currItem === "ABOUT" && isDesktop)}
     <div class="curr-item-bar" transition:slide>{currItem}</div>
   {/if}
 </div>

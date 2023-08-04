@@ -84,6 +84,7 @@
         width: 100%;
         aspect-ratio: 3/1;
         background-color: #f2f2f2;
+        margin: 5px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
