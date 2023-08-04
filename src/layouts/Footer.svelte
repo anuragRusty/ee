@@ -76,6 +76,7 @@ footer{
 
 footer > div {
     border-right:1px solid white;
+    border-radius: 0px;
 }
 
 
