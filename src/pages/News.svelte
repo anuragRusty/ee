@@ -71,7 +71,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: #fff;
+    background-color: #f2f2f2;
     border-radius: 3px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }

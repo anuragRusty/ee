@@ -32,7 +32,7 @@
       font-size: 20px;
       font-style: italic;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      background-color: #fff;
+      background-color: #f2f2f2;
     }
 
     p{

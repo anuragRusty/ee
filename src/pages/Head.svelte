@@ -56,7 +56,7 @@
     height: 100%;
     background-color: #f2f2f2;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    background-color: #fff;
+    background-color: #f2f2f2;
   }
 
   .name-title {
@@ -66,7 +66,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #f2f2f2;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 
@@ -97,7 +97,8 @@
     display: flex;
     flex-direction: row;
     gap: 10px;
-    background-color: #fff;
+    background-color: #f2f2f2;
+    color:#555;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 
@@ -119,7 +120,7 @@
   }
 
   .about {
-    border-left: 2px solid #555;
+    border-left: 2px solid #999;
     padding: 20px;
     border-radius: 0px;
   }
@@ -174,7 +175,7 @@
     }
 
     .about {
-      border-left: 2px solid #f2f2f2;
+      border-left: 2px solid #999;
       padding: 10px;
     }
   }

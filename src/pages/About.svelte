@@ -60,7 +60,7 @@
         flex-wrap: wrap;
         gap: 10px;
         justify-content: space-between;
-        background-color: #fff;
+        background-color: #f2f2f2;
     }
 
     .sub-info-container{
