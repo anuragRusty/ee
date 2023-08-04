@@ -60,6 +60,7 @@
         flex-wrap: wrap;
         gap: 10px;
         justify-content: space-between;
+        background-color: #fff;
     }
 
     .sub-info-container{
@@ -78,7 +79,7 @@
         color:#f2f2f2;
         text-align: center;
         background-color: #0f52ba;
-         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
 
     .info{
