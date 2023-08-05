@@ -6,7 +6,7 @@
   let isDesktop = window.screen.width > 600;
   let isMobile = false;
 
-  const navItems = ["HOME", "RESOURCES","NOTICE","FACULITY", "CEC","LOGIN"];
+  const navItems = ["HOME", "RESOURCE","NOTICE", "CEC","LOGIN"];
   const menuItems = ["HEAD","NEWS","EVENTS","PEOPLE","VISTOR'S HELP","CONTACT","ABOUT",];
   
   let currItem = navItems[0];

@@ -109,8 +109,4 @@ ul {
     width: auto;
 }
 }
-
-
-
-
 </style>

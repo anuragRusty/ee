@@ -12,6 +12,7 @@
     import Events from "./pages/Events.svelte";
     import Login from "./pages/Login.svelte";
     import Notice from "./pages/Notice.svelte";
+    import Resource from "./pages/Resource.svelte";
 </script>
 
 <main>
@@ -30,6 +31,7 @@
         <Route path="/events" component={Events}></Route>
         <Route path="/login" component={Login}></Route>
         <Route path="/notice" component={Notice}></Route>
+        <Route path="/resource" component={Resource}></Route>
         <Footer />
     </Router>
 </main>
