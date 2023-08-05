@@ -2,7 +2,7 @@
     import Email from "../assets/email.svg";
     import Linkedin from "../assets/linkedin.svg";
     import Phone from "../assets/phone.svg";
-    import {slide} from "svelte/transition";
+    import {slide,scale} from "svelte/transition";
 
     const HEAD = {
        name:"Dr. Dummy Person",
@@ -29,7 +29,7 @@
 </script>
 
 <div class="container" in:slide>
-  <div class="head">
+  <div class="head"  transition:scale>
     <div class="hod">
         <div class="profile-pic-hod"></div>
         <div class="name-head">{HEAD.name}</div>
@@ -44,7 +44,7 @@
   <div class="web-team-leads">
     <div class="banner">WEB TEAM LEADS</div>
     {#each WEB_TEAM as member}
-     <div class="member">
+     <div class="member"  transition:scale>
         <div class="profile-pic-member"></div>
         <div class="name">{member.name}</div>
         <i style="margin:2px;">Student</i>

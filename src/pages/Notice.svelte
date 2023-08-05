@@ -1,6 +1,6 @@
 <!-- NoticePage.svelte -->
 <script>
-     import { slide } from "svelte/transition";
+     import { slide,scale } from "svelte/transition";
     const notices = [
       {
         title: 'Notice 1',
@@ -17,7 +17,7 @@
   
   <div class="container" in:slide>
     {#each notices as notice}
-      <div class="notice-box">
+      <div transition:scale class="notice-box">
         <h1>{notice.title}</h1>
         <p>{notice.content}</p>
         <small>Published on: {notice.date}</small>

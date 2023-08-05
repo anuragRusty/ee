@@ -1,5 +1,5 @@
 <script>
-import {slide,fade} from "svelte/transition";
+import {slide,scale} from "svelte/transition";
 import OptionBox from "../components/OptionBox.svelte";
     import SearchBox from "../components/SearchBox.svelte";
 
@@ -138,7 +138,7 @@ const subjects = [
     </div>
     {#each subjects as subject}
     {#if subject.name.toLocaleLowerCase().includes(searchText.toLocaleLowerCase().trim())}
-     <div class="subject" transition:fade>
+     <div class="subject" transition:scale>
          <div class="qp">
             <h2>{subject.name}</h2>
             <h3>Previous Year Question Papers</h3>

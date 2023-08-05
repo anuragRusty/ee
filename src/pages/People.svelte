@@ -1,5 +1,5 @@
 <script>
-  import { slide,fade } from "svelte/transition";
+  import { slide,scale } from "svelte/transition";
     import SearchBox from "../components/SearchBox.svelte";
   const Peoples = [
     {
@@ -52,10 +52,10 @@
 </script>
 
 <SearchBox bind:searchText/>
-<div class="container" in:slide>
+<div class="container" in:slide >
   {#each Peoples as people}
   {#if people.name.toLocaleLowerCase().includes(searchText.toLocaleLowerCase().trim())}
-    <div class="people" transition:fade>
+    <div class="people" transition:scale>
       <div class="profile-pic" />
       <div class="profile-name">{people.name}</div>
       <div class="profile-about">{people.about}</div>

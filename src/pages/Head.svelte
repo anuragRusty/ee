@@ -1,5 +1,5 @@
 <script>
-  import { slide } from "svelte/transition";
+  import { slide,scale } from "svelte/transition";
 
   const HEAD = {
     name: "Dr. Dummy Person",
@@ -8,7 +8,7 @@
 </script>
 
 <div class="container" in:slide>
-  <div class="head">
+  <div class="head" transition:scale >
     <div class="head-pic"></div>
     <div class="name-title">
       <div class="name">{HEAD.name}</div>
@@ -16,7 +16,7 @@
     </div>
   </div>
   <div class="reach-me">REACH ME</div>
-  <div class="contact">
+  <div class="contact" transition:scale>
     <div class="sub-contact">
       <div class="contact-details">
         <div>Phone (Head's Cabin): +91-3187238282262</div>

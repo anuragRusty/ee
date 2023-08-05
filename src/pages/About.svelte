@@ -1,5 +1,5 @@
 <script>
-    import {slide} from "svelte/transition";
+    import {slide,scale} from "svelte/transition";
    
     const ABOUT = [
         {
@@ -32,7 +32,7 @@
 <div class="container" in:slide>
  <div class="info-container">
    {#each ABOUT as item}
-   <div class="sub-info-container">
+   <div class="sub-info-container"  transition:scale>
        <div class="title">{item.title}</div>
        <div class="info">{item.info}</div>
    </div>

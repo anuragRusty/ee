@@ -1,5 +1,5 @@
 <script>
-    import {slide,fade} from "svelte/transition";
+    import {slide,scale} from "svelte/transition";
     import SearchBox from "../components/SearchBox.svelte";
    
     const newsArticle = [
@@ -47,7 +47,7 @@ let searchText = "";
 <div class="container" in:slide>
   {#each newsArticle as article}
   {#if article.title.toLocaleLowerCase().includes(searchText.toLocaleLowerCase().trim())}
-    <div class="news-container" transition:fade>
+    <div class="news-container" transition:scale>
       <div class="news-header" on:click={() => article.show = !article.show}>
         <div class="title">{article.title}</div>
         <div class="date">{article.date}</div>
