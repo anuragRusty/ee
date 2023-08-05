@@ -1,6 +1,7 @@
 <script>
-import {slide} from "svelte/transition";
+import {slide,fade} from "svelte/transition";
 import OptionBox from "../components/OptionBox.svelte";
+    import SearchBox from "../components/SearchBox.svelte";
 
 const years = ["2019","2020","2021","2022","2023"];
 const semesters = ["1","2","3","4","5","6","7"];
@@ -127,11 +128,17 @@ const subjects = [
     },
   ];
 
+  let searchText = "";
+
 </script>
+<SearchBox bind:searchText={searchText}/>
 
 <div class="container" in:slide>
+    <div class="sub-container-1">
+    </div>
     {#each subjects as subject}
-     <div class="subject">
+    {#if subject.name.toLocaleLowerCase().includes(searchText.toLocaleLowerCase().trim())}
+     <div class="subject" transition:fade>
          <div class="qp">
             <h2>{subject.name}</h2>
             <h3>Previous Year Question Papers</h3>
@@ -158,6 +165,7 @@ const subjects = [
          {/each}
        </div>
     </div>
+    {/if}
     {/each}
 </div>
 
@@ -171,7 +179,7 @@ const subjects = [
     }
 
     .subject{
-        width: calc(33% - 8px);
+        width: calc(33% - 6px);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         display: flex;
         flex-direction: column;

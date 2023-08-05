@@ -35,3 +35,10 @@
         <Footer />
     </Router>
 </main>
+
+<style>
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+</style>
