@@ -1,5 +1,5 @@
 <script>
-    import {slide} from "svelte/transition";
+    import {slide,fade} from "svelte/transition";
     const events = [
       {
         title: "Event Title 1",
@@ -24,7 +24,7 @@
 
 <div class="container" in:slide>
     {#each events as event}
-      <section class="event">
+      <section class="event" transition:fade>
         <img src={event.imageSrc} alt={event.title}>
         <h2>{event.title}</h2>
         <p class="date">Date: {event.date}</p>
